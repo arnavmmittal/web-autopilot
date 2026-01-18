@@ -1,0 +1,73 @@
+name: Nightly Demo Run
+
+on:
+  schedule:
+    # Run every night at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      target_url:
+        description: 'Target URL to test (defaults to demo site)'
+        required: false
+        default: 'https://the-internet.herokuapp.com'
+
+env:
+  DEMO_SITE_URL: ${{ github.event.inputs.target_url || 'https://the-internet.herokuapp.com' }}
+
+jobs:
+  nightly-run:
+    name: Nightly Demo Run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install chromium
+
+      - name: Build
+        run: pnpm build
+
+      - name: Run Web Autopilot
+        run: |
+          node packages/cli/dist/index.js run \
+            --url "$DEMO_SITE_URL" \
+            --max-pages 15 \
+            --goal full \
+            --output ./nightly-output \
+            --report-title "Nightly Demo Run"
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Upload nightly report
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-report-${{ github.run_number }}
+          path: ./nightly-output
+          retention-days: 30
+
+      - name: Check for critical issues
+        run: |
+          CRITICAL_COUNT=$(cat ./nightly-output/report.json | jq '.summary.issuesBySeverity.critical // 0')
+          HIGH_COUNT=$(cat ./nightly-output/report.json | jq '.summary.issuesBySeverity.high // 0')
+
+          echo "Critical issues: $CRITICAL_COUNT"
+          echo "High issues: $HIGH_COUNT"
+
+          if [ "$CRITICAL_COUNT" -gt 5 ]; then
+            echo "::warning::Found $CRITICAL_COUNT critical issues"
+          fi

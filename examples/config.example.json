@@ -1,0 +1,15 @@
+{
+  "$schema": "../packages/core/config.schema.json",
+  "url": "https://example.com",
+  "maxPages": 50,
+  "timeoutMs": 30000,
+  "headed": false,
+  "outputDir": "./output",
+  "allowExternal": false,
+  "allowDestructive": false,
+  "goals": [
+    { "type": "preset", "value": "full" }
+  ],
+  "reportTitle": "Example Site Audit",
+  "demo": false
+}
