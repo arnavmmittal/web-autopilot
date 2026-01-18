@@ -23,10 +23,11 @@ test-results/
 playwright-report/
 playwright/.cache/
 
-# Web Autopilot outputs (except demo)
-output/
-artifacts/
+# Web Autopilot outputs (except demo and src)
+/output/
+/artifacts/
 !examples/demo-output/
+!packages/*/src/output/
 
 # Environment
 .env
