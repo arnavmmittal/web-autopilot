@@ -353,6 +353,13 @@ export class WebAutopilot {
       'a11y-missing-label': 0,
       'a11y-missing-name': 0,
       'a11y-focus-trap': 0,
+      // LLM Chat Testing Categories
+      'llm-streaming': 0,
+      'llm-chat-flow': 0,
+      'llm-prompt-corpus': 0,
+      'llm-chaos': 0,
+      'llm-reliability': 0,
+      'llm-performance': 0,
       other: 0,
     };
 

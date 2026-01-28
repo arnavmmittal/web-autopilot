@@ -17,6 +17,13 @@ const CATEGORY_SEVERITY: Record<IssueCategory, IssueSeverity> = {
   'a11y-missing-label': 'medium',
   'a11y-missing-name': 'medium',
   'a11y-focus-trap': 'high',
+  // LLM Chat Testing Categories
+  'llm-streaming': 'high',
+  'llm-chat-flow': 'high',
+  'llm-prompt-corpus': 'medium',
+  'llm-chaos': 'high',
+  'llm-reliability': 'high',
+  'llm-performance': 'medium',
   other: 'low',
 };
 

@@ -152,6 +152,13 @@ export type IssueCategory =
   | 'a11y-missing-label'
   | 'a11y-missing-name'
   | 'a11y-focus-trap'
+  // LLM Chat Testing Categories
+  | 'llm-streaming'
+  | 'llm-chat-flow'
+  | 'llm-prompt-corpus'
+  | 'llm-chaos'
+  | 'llm-reliability'
+  | 'llm-performance'
   | 'other';
 
 export interface Issue {
