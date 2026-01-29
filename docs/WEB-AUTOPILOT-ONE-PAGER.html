@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Web Autopilot - One Pager</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #1a1a1a;
+      padding: 40px;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+    h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    h2 { font-size: 13px; font-weight: 600; color: #0066cc; margin: 16px 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #0066cc; padding-bottom: 4px; }
+    h3 { font-size: 11px; font-weight: 600; margin: 8px 0 4px 0; }
+    .subtitle { font-size: 14px; color: #666; margin-bottom: 16px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card { background: #f8f9fa; padding: 12px; border-radius: 6px; border-left: 3px solid #0066cc; }
+    .card h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 10px; }
+    th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background: #f0f0f0; font-weight: 600; }
+    .metric { display: inline-block; background: #e8f4fd; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #0066cc; }
+    .highlight { background: #fff3cd; padding: 10px; border-radius: 6px; margin: 12px 0; }
+    code { background: #f0f0f0; padding: 1px 4px; border-radius: 3px; font-family: 'SF Mono', Monaco, monospace; font-size: 10px; }
+    ul { padding-left: 16px; }
+    li { margin: 3px 0; }
+    .footer { margin-top: 20px; padding-top: 12px; border-top: 1px solid #ddd; font-size: 10px; color: #666; display: flex; justify-content: space-between; }
+    @media print {
+      body { padding: 20px; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Web Autopilot</h1>
+<div class="subtitle">Enterprise-Grade Testing for Copilot-Style LLM Applications</div>
+
+<div class="highlight">
+  <strong>The Problem:</strong> You can't test if an LLM's answer is "correct" - it's non-deterministic.<br>
+  <strong>The Solution:</strong> Test <em>structure</em>, not <em>semantics</em>. Validate JSON format, response timing, and error handling.
+</div>
+
+<h2>Four Testing Pillars</h2>
+<div class="grid">
+  <div class="card">
+    <h3>1. Structure Over Semantics</h3>
+    <ul>
+      <li>JSON validity when JSON requested</li>
+      <li>Code block syntax validation</li>
+      <li>Markdown table/list formatting</li>
+      <li>Response non-empty and timely</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>2. Time to First Token (TTFT)</h3>
+    <ul>
+      <li>Critical streaming UX metric</li>
+      <li>Target: <span class="metric">&lt; 3 seconds</span></li>
+      <li>Automated trend tracking</li>
+      <li>Regression alerting</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>3. Chaos Exploration</h3>
+    <ul>
+      <li>Autonomous "monkey" testing</li>
+      <li>Seeded PRNG for reproducibility</li>
+      <li>Finds edge cases humans miss</li>
+      <li>Safety: never clicks Delete/Logout</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>4. Reliability Injection</h3>
+    <ul>
+      <li>Offline handling verification</li>
+      <li>429/500/503 error responses</li>
+      <li>Slow/flaky network simulation</li>
+      <li>Graceful degradation checks</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Modules Included</h2>
+<table>
+  <tr>
+    <th>Module</th>
+    <th>Purpose</th>
+    <th>Key Capability</th>
+  </tr>
+  <tr>
+    <td><code>ChaosRunner</code></td>
+    <td>Random exploration</td>
+    <td>Reproducible with <code>--seed 12345</code></td>
+  </tr>
+  <tr>
+    <td><code>StreamingValidator</code></td>
+    <td>Streaming response testing</td>
+    <td>TTFT measurement, stop button verification</td>
+  </tr>
+  <tr>
+    <td><code>PromptCorpusTester</code></td>
+    <td>Response format validation</td>
+    <td>JSON, code, lists, tables without semantic checks</td>
+  </tr>
+  <tr>
+    <td><code>NetworkInjector</code></td>
+    <td>Failure simulation</td>
+    <td>Offline, slow, 429, 500, 503 injection</td>
+  </tr>
+  <tr>
+    <td><code>PerformanceMetrics</code></td>
+    <td>Performance tracking</td>
+    <td>TTFT trends, memory leaks, scroll FPS</td>
+  </tr>
+  <tr>
+    <td><code>JsonValidator</code></td>
+    <td>JSON response validation</td>
+    <td>Auto-repair, field checking, extraction</td>
+  </tr>
+</table>
+
+<h2>Copilot Applications</h2>
+<div class="grid">
+  <div>
+    <h3>M365 Copilot</h3>
+    <ul>
+      <li>Streaming render in Word/Excel/PPT</li>
+      <li>Format preservation validation</li>
+      <li>Offline graceful degradation</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Teams/GitHub Copilot</h3>
+    <ul>
+      <li>Multi-turn conversation state</li>
+      <li>Code block syntax validation</li>
+      <li>Suggestion rendering speed</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Enterprise Value</h2>
+<table>
+  <tr>
+    <th>Without Web Autopilot</th>
+    <th>With Web Autopilot</th>
+  </tr>
+  <tr>
+    <td>Manual testing, can't scale</td>
+    <td>Automated CI/CD integration</td>
+  </tr>
+  <tr>
+    <td>"Can't test LLM apps"</td>
+    <td>Structure + reliability testing</td>
+  </tr>
+  <tr>
+    <td>No performance baseline</td>
+    <td>TTFT trends + alerting</td>
+  </tr>
+  <tr>
+    <td>Edge cases found in production</td>
+    <td>Chaos runner finds them first</td>
+  </tr>
+  <tr>
+    <td>"Works on my machine"</td>
+    <td>Reproducible with seeds</td>
+  </tr>
+</table>
+
+<div class="footer">
+  <span><strong>GitHub:</strong> github.com/arnavmmittal/web-autopilot</span>
+  <span><strong>Stack:</strong> TypeScript, Playwright, Node.js</span>
+  <span><strong>License:</strong> MIT</span>
+</div>
+
+</body>
+</html>
