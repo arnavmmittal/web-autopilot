@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Autopilot Demo Report</title>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-tertiary: #334155;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --border-color: #475569;
+      --accent: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .severity-chart {
+      display: flex;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .severity-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .issues-section {
+      margin-top: 2rem;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .issue-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .issue-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .issue-header:hover {
+      background: var(--bg-tertiary);
+    }
+
+    .severity-badge {
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .issue-title {
+      flex: 1;
+      font-weight: 500;
+    }
+
+    .issue-url {
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .issue-details {
+      display: none;
+      padding: 1rem;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-primary);
+    }
+
+    .issue-card.expanded .issue-details {
+      display: block;
+    }
+
+    .detail-section {
+      margin-bottom: 1rem;
+    }
+
+    .detail-label {
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .steps-list {
+      list-style-position: inside;
+      color: var(--text-secondary);
+    }
+
+    .steps-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    pre {
+      background: var(--bg-tertiary);
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      overflow-x: auto;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .screenshot {
+      max-width: 100%;
+      border-radius: 0.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .ai-summary {
+      background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+      border: 1px solid #3b82f6;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .ai-summary h2 {
+      color: #60a5fa;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pages-section {
+      margin-top: 2rem;
+    }
+
+    .page-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .page-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+    }
+
+    .page-status {
+      font-weight: 600;
+    }
+
+    .page-status.ok { color: #22c55e; }
+    .page-status.error { color: #ef4444; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Web Autopilot Demo Report</h1>
+      <div class="meta">
+        Generated: 1/28/2026, 6:06:55 PM |
+        Target: <a href="https://the-internet.herokuapp.com" style="color: var(--accent)">https://the-internet.herokuapp.com</a> |
+        Duration: 5.6s
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="stat-card">
+        <div class="stat-value">10</div>
+        <div class="stat-label">Pages Visited</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">1</div>
+        <div class="stat-label">Forms Discovered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">74</div>
+        <div class="stat-label">Issues Found</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">8</div>
+        <div class="stat-label">Broken Links</div>
+      </div>
+    </section>
+
+    <div class="severity-chart">
+      
+        <span class="severity-bar" style="background: #ca8a04">
+          medium: 74
+        </span>
+      
+    </div>
+
+    
+
+    <section class="issues-section">
+      <h2>Issues (74)</h2>
+      
+        <div class="category-header">
+          <h3>Broken Link</h3>
+          <span style="color: var(--text-secondary)">(8)</span>
+        </div>
+      
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 401</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/basic_auth&quot; returns HTTP 401. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/</li><li>Find link to: https://the-internet.herokuapp.com/basic_auth</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 401</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 401</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 404</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/add_remove_elements&quot; returns HTTP 404. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/</li><li>Find link to: https://the-internet.herokuapp.com/add_remove_elements</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 404</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 404</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 401</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/digest_auth&quot; returns HTTP 401. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/</li><li>Find link to: https://the-internet.herokuapp.com/digest_auth</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 401</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 401</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 401</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/download_secure&quot; returns HTTP 401. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/</li><li>Find link to: https://the-internet.herokuapp.com/download_secure</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 401</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 401</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 404</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/about&quot; returns HTTP 404. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/disappearing_elements</li><li>Find link to: https://the-internet.herokuapp.com/about</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 404</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 404</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 404</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/contact-us&quot; returns HTTP 404. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/disappearing_elements</li><li>Find link to: https://the-internet.herokuapp.com/contact-us</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 404</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 404</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 404</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/portfolio&quot; returns HTTP 404. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/disappearing_elements</li><li>Find link to: https://the-internet.herokuapp.com/portfolio</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 404</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 404</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Broken link: HTTP 404</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Link to &quot;https://the-internet.herokuapp.com/gallery&quot; returns HTTP 404. Found on 1 page(s).</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/disappearing_elements</li><li>Find link to: https://the-internet.herokuapp.com/gallery</li><li>Click the link or check its status</li><li>Observe: Link returns HTTP 404</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Link should return a successful response (2xx)</p>
+              <p><strong>Actual:</strong> Link returns HTTP 404</p>
+            </div>
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+        <div class="category-header">
+          <h3>Console Error</h3>
+          <span style="color: var(--text-secondary)">(32)</span>
+        </div>
+      
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/abtest</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/abtest</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: the server responded with</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/add_remove_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: the server responded with a status of 404 (Not Found)</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: the server responded with</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/basic_auth</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: the server responded with a status of 401 (Unauthorized)</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: the server responded with</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: the server responded with a status of 404 (Not Found)</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: the server responded with</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/digest_auth</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: the server responded with a status of 401 (Unauthorized)</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Console error on page</p>
+          </div>
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Console Output</div>
+              <pre>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</pre>
+            </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+        <div class="category-header">
+          <h3>Network Error</h3>
+          <span style="color: var(--text-secondary)">(32)</span>
+        </div>
+      
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/abtest</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/abtest</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://the-internet.herokuapp.com/add_r</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/add_remove_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with 404</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://the-internet.herokuapp.com/basic</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/basic_auth</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with 401</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://the-internet.herokuapp.com/asdf.</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/broken_images</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with 404</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/challenging_dom</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/context_menu</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://the-internet.herokuapp.com/diges</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/digest_auth</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with 401</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Network error: GET https://298279967.log.optimizely.com/eve</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/disappearing_elements</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Network request failed with error</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    
+        <div class="category-header">
+          <h3>A11y Missing Label</h3>
+          <span style="color: var(--text-secondary)">(2)</span>
+        </div>
+      
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Input missing accessible label</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Input field has no accessible label. Element: &lt;input type=&quot;checkbox&quot;&gt;</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/checkboxes</li><li>Locate input: input</li><li>Use screen reader or accessibility tools</li><li>Observe: Input has no accessible label</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Input should have an accessible label via &lt;label&gt;, aria-label, or aria-labelledby</p>
+              <p><strong>Actual:</strong> Input has no accessible name for assistive technologies</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Suggested Fix</div>
+              <p>Add a &lt;label for=&quot;...&quot;&gt; element or aria-label attribute to: input</p>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="issue-card">
+        <div class="issue-header">
+          <span class="severity-badge" style="background: #ca8a04">medium</span>
+          <span class="issue-title">Input missing accessible label</span>
+          <span class="issue-url">https://the-internet.herokuapp.com/checkboxes</span>
+        </div>
+        <div class="issue-details">
+          <div class="detail-section">
+            <div class="detail-label">Description</div>
+            <p>Input field has no accessible label. Element: &lt;input type=&quot;checkbox&quot; checked=&quot;&quot;&gt;</p>
+          </div>
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Steps to Reproduce</div>
+              <ol class="steps-list">
+                <li>Navigate to https://the-internet.herokuapp.com/checkboxes</li><li>Locate input: input</li><li>Use screen reader or accessibility tools</li><li>Observe: Input has no accessible label</li>
+              </ol>
+            </div>
+          
+
+          
+            <div class="detail-section">
+              <p><strong>Expected:</strong> Input should have an accessible label via &lt;label&gt;, aria-label, or aria-labelledby</p>
+              <p><strong>Actual:</strong> Input has no accessible name for assistive technologies</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            <div class="detail-section">
+              <div class="detail-label">Suggested Fix</div>
+              <p>Add a &lt;label for=&quot;...&quot;&gt; element or aria-label attribute to: input</p>
+            </div>
+          
+        </div>
+      </div>
+    
+    </section>
+
+    <section class="pages-section">
+      <h2>Pages Visited (10)</h2>
+      <div class="page-list">
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">818ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">70ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status error">404</span>
+            <span>https://the-internet.herokuapp.com/add_remove_elements</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">43ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status error">401</span>
+            <span>https://the-internet.herokuapp.com/basic_auth</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">50ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">256ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">110ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">68ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">85ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status error">401</span>
+            <span>https://the-internet.herokuapp.com/digest_auth</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">37ms</span>
+          </div>
+        
+          <div class="page-item">
+            <span class="page-status ok">200</span>
+            <span>The Internet</span>
+            <span style="color: var(--text-secondary); margin-left: auto;">79ms</span>
+          </div>
+        
+        
+      </div>
+    </section>
+
+    <footer>
+      Generated by <a href="https://github.com/web-autopilot/web-autopilot">Web Autopilot</a> v0.1.0
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.issue-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.closest('.issue-card').classList.toggle('expanded');
+      });
+    });
+  </script>
+</body>
+</html>

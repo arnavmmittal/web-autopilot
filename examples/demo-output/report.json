@@ -1,0 +1,2499 @@
+{
+  "meta": {
+    "title": "Web Autopilot Demo Report",
+    "version": "0.1.0",
+    "generatedAt": "2026-01-28T23:06:55.320Z",
+    "config": {
+      "url": "https://the-internet.herokuapp.com",
+      "maxPages": 10,
+      "timeoutMs": 15000,
+      "headed": false,
+      "outputDir": "./examples/demo-output",
+      "goals": [
+        {
+          "type": "preset",
+          "value": "full"
+        }
+      ],
+      "reportTitle": "Web Autopilot Demo Report",
+      "demo": true
+    }
+  },
+  "crawl": {
+    "pages": [
+      {
+        "url": "https://the-internet.herokuapp.com/",
+        "normalizedUrl": "https://the-internet.herokuapp.com/",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 818,
+        "visitedAt": "2026-01-28T23:06:51.859Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "https://the-internet.herokuapp.com/abtest",
+          "https://the-internet.herokuapp.com/add_remove_elements",
+          "https://the-internet.herokuapp.com/basic_auth",
+          "https://the-internet.herokuapp.com/broken_images",
+          "https://the-internet.herokuapp.com/challenging_dom",
+          "https://the-internet.herokuapp.com/checkboxes",
+          "https://the-internet.herokuapp.com/context_menu",
+          "https://the-internet.herokuapp.com/digest_auth",
+          "https://the-internet.herokuapp.com/disappearing_elements",
+          "https://the-internet.herokuapp.com/drag_and_drop",
+          "https://the-internet.herokuapp.com/dropdown",
+          "https://the-internet.herokuapp.com/dynamic_content",
+          "https://the-internet.herokuapp.com/dynamic_controls",
+          "https://the-internet.herokuapp.com/dynamic_loading",
+          "https://the-internet.herokuapp.com/entry_ad",
+          "https://the-internet.herokuapp.com/exit_intent",
+          "https://the-internet.herokuapp.com/download",
+          "https://the-internet.herokuapp.com/upload",
+          "https://the-internet.herokuapp.com/floating_menu",
+          "https://the-internet.herokuapp.com/forgot_password",
+          "https://the-internet.herokuapp.com/login",
+          "https://the-internet.herokuapp.com/frames",
+          "https://the-internet.herokuapp.com/geolocation",
+          "https://the-internet.herokuapp.com/horizontal_slider",
+          "https://the-internet.herokuapp.com/hovers",
+          "https://the-internet.herokuapp.com/infinite_scroll",
+          "https://the-internet.herokuapp.com/inputs",
+          "https://the-internet.herokuapp.com/jqueryui/menu",
+          "https://the-internet.herokuapp.com/javascript_alerts",
+          "https://the-internet.herokuapp.com/javascript_error",
+          "https://the-internet.herokuapp.com/key_presses",
+          "https://the-internet.herokuapp.com/large",
+          "https://the-internet.herokuapp.com/windows",
+          "https://the-internet.herokuapp.com/nested_frames",
+          "https://the-internet.herokuapp.com/notification_message",
+          "https://the-internet.herokuapp.com/redirector",
+          "https://the-internet.herokuapp.com/download_secure",
+          "https://the-internet.herokuapp.com/shadowdom",
+          "https://the-internet.herokuapp.com/shifting_content",
+          "https://the-internet.herokuapp.com/slow",
+          "https://the-internet.herokuapp.com/tables",
+          "https://the-internet.herokuapp.com/status_codes",
+          "https://the-internet.herokuapp.com/typos",
+          "https://the-internet.herokuapp.com/tinymce",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:51.680Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:51.680Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/abtest",
+        "normalizedUrl": "https://the-internet.herokuapp.com/abtest",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 70,
+        "visitedAt": "2026-01-28T23:06:51.963Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:51.957Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:51.957Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:51.957Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:51.957Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/add_remove_elements",
+        "normalizedUrl": "https://the-internet.herokuapp.com/add_remove_elements",
+        "title": "",
+        "statusCode": 404,
+        "loadTimeMs": 43,
+        "visitedAt": "2026-01-28T23:06:52.040Z",
+        "links": [],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "url": "https://the-internet.herokuapp.com/add_remove_elements",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.034Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://the-internet.herokuapp.com/add_remove_elements",
+            "method": "GET",
+            "status": 404,
+            "statusText": "Not Found",
+            "resourceType": "document",
+            "timestamp": "2026-01-28T23:06:52.033Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/basic_auth",
+        "normalizedUrl": "https://the-internet.herokuapp.com/basic_auth",
+        "title": "",
+        "statusCode": 401,
+        "loadTimeMs": 50,
+        "visitedAt": "2026-01-28T23:06:52.124Z",
+        "links": [],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+            "url": "https://the-internet.herokuapp.com/basic_auth",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.118Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://the-internet.herokuapp.com/basic_auth",
+            "method": "GET",
+            "status": 401,
+            "statusText": "Unauthorized",
+            "resourceType": "document",
+            "timestamp": "2026-01-28T23:06:52.117Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/broken_images",
+        "normalizedUrl": "https://the-internet.herokuapp.com/broken_images",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 256,
+        "visitedAt": "2026-01-28T23:06:52.412Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.406Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.406Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.406Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "url": "https://the-internet.herokuapp.com/asdf.jpg",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.410Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.406Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.406Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.406Z"
+          },
+          {
+            "url": "https://the-internet.herokuapp.com/asdf.jpg",
+            "method": "GET",
+            "status": 404,
+            "statusText": "Not Found",
+            "resourceType": "image",
+            "timestamp": "2026-01-28T23:06:52.410Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/challenging_dom",
+        "normalizedUrl": "https://the-internet.herokuapp.com/challenging_dom",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 110,
+        "visitedAt": "2026-01-28T23:06:52.555Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "https://the-internet.herokuapp.com/challenging_dom",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.539Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/checkboxes",
+        "normalizedUrl": "https://the-internet.herokuapp.com/checkboxes",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 68,
+        "visitedAt": "2026-01-28T23:06:52.664Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [
+          {
+            "selector": "#checkboxes",
+            "id": "checkboxes",
+            "action": "https://the-internet.herokuapp.com/checkboxes",
+            "method": "get",
+            "fields": [
+              {
+                "selector": "#checkboxes > input:nth-of-type(1)",
+                "tagName": "input",
+                "type": "checkbox",
+                "inferredType": "checkbox",
+                "isRequired": false,
+                "requiredReason": "none"
+              },
+              {
+                "selector": "#checkboxes > input:nth-of-type(2)",
+                "tagName": "input",
+                "type": "checkbox",
+                "inferredType": "checkbox",
+                "isRequired": false,
+                "requiredReason": "none"
+              }
+            ],
+            "isFormLike": false
+          }
+        ],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.653Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/context_menu",
+        "normalizedUrl": "https://the-internet.herokuapp.com/context_menu",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 85,
+        "visitedAt": "2026-01-28T23:06:52.780Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.776Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/digest_auth",
+        "normalizedUrl": "https://the-internet.herokuapp.com/digest_auth",
+        "title": "",
+        "statusCode": 401,
+        "loadTimeMs": 37,
+        "visitedAt": "2026-01-28T23:06:52.850Z",
+        "links": [],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+            "url": "https://the-internet.herokuapp.com/digest_auth",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.846Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://the-internet.herokuapp.com/digest_auth",
+            "method": "GET",
+            "status": 401,
+            "statusText": "Unauthorized",
+            "resourceType": "document",
+            "timestamp": "2026-01-28T23:06:52.846Z"
+          }
+        ]
+      },
+      {
+        "url": "https://the-internet.herokuapp.com/disappearing_elements",
+        "normalizedUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+        "title": "The Internet",
+        "statusCode": 200,
+        "loadTimeMs": 79,
+        "visitedAt": "2026-01-28T23:06:52.959Z",
+        "links": [
+          "https://github.com/tourdedave/the-internet",
+          "https://the-internet.herokuapp.com/",
+          "https://the-internet.herokuapp.com/about",
+          "https://the-internet.herokuapp.com/contact-us",
+          "https://the-internet.herokuapp.com/portfolio",
+          "https://the-internet.herokuapp.com/gallery",
+          "http://elementalselenium.com/"
+        ],
+        "forms": [],
+        "consoleErrors": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fdisappearing_elements&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612943&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "lineNumber": 0,
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          }
+        ],
+        "networkErrors": [
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fdisappearing_elements&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612943&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          },
+          {
+            "url": "https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263",
+            "method": "GET",
+            "errorText": "net::ERR_NAME_NOT_RESOLVED",
+            "resourceType": "xhr",
+            "timestamp": "2026-01-28T23:06:52.954Z"
+          }
+        ]
+      }
+    ],
+    "startUrl": "https://the-internet.herokuapp.com",
+    "startedAt": "2026-01-28T23:06:50.988Z",
+    "completedAt": "2026-01-28T23:06:52.960Z",
+    "totalPagesVisited": 10,
+    "maxPagesReached": true
+  },
+  "issues": [
+    {
+      "id": "issue-025471e85a82",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 401",
+      "description": "Link to \"https://the-internet.herokuapp.com/basic_auth\" returns HTTP 401. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/",
+        "Find link to: https://the-internet.herokuapp.com/basic_auth",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 401"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/basic_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 401",
+      "foundAt": "2026-01-28T23:06:53.044Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/basic_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-1826edfc9899",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 404",
+      "description": "Link to \"https://the-internet.herokuapp.com/add_remove_elements\" returns HTTP 404. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/",
+        "Find link to: https://the-internet.herokuapp.com/add_remove_elements",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 404"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/add_remove_elements\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 404",
+      "foundAt": "2026-01-28T23:06:53.091Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/add_remove_elements\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-7a34c03d827d",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 401",
+      "description": "Link to \"https://the-internet.herokuapp.com/digest_auth\" returns HTTP 401. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/",
+        "Find link to: https://the-internet.herokuapp.com/digest_auth",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 401"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/digest_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 401",
+      "foundAt": "2026-01-28T23:06:53.187Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/digest_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-17f92fbbeecb",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 401",
+      "description": "Link to \"https://the-internet.herokuapp.com/download_secure\" returns HTTP 401. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/",
+        "Find link to: https://the-internet.herokuapp.com/download_secure",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 401"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/download_secure\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 401",
+      "foundAt": "2026-01-28T23:06:54.027Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/download_secure\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-5d4bd63113bc",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 404",
+      "description": "Link to \"https://the-internet.herokuapp.com/about\" returns HTTP 404. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+        "Find link to: https://the-internet.herokuapp.com/about",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 404"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/about\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 404",
+      "foundAt": "2026-01-28T23:06:54.197Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/about\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-4e77732044aa",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 404",
+      "description": "Link to \"https://the-internet.herokuapp.com/contact-us\" returns HTTP 404. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+        "Find link to: https://the-internet.herokuapp.com/contact-us",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 404"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/contact-us\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 404",
+      "foundAt": "2026-01-28T23:06:54.201Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/contact-us\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-d787a5e68d68",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 404",
+      "description": "Link to \"https://the-internet.herokuapp.com/portfolio\" returns HTTP 404. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+        "Find link to: https://the-internet.herokuapp.com/portfolio",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 404"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/portfolio\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 404",
+      "foundAt": "2026-01-28T23:06:54.207Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/portfolio\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-2bc65ae3c79c",
+      "severity": "medium",
+      "category": "broken-link",
+      "title": "Broken link: HTTP 404",
+      "description": "Link to \"https://the-internet.herokuapp.com/gallery\" returns HTTP 404. Found on 1 page(s).",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+        "Find link to: https://the-internet.herokuapp.com/gallery",
+        "Click the link or check its status",
+        "Observe: Link returns HTTP 404"
+      ],
+      "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/gallery\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+      "expectedBehavior": "Link should return a successful response (2xx)",
+      "actualBehavior": "Link returns HTTP 404",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/gallery\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-d8f58049189b",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-8d3cc2a1e01e",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-aec2befca26e",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/abtest",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-cf9657434cac",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/abtest",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-26a3a8c07879",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/abtest",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/abtest",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-1a3636d13c54",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/abtest",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/abtest",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-351ed03bbe52",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: the server responded with",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/add_remove_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ]
+      }
+    },
+    {
+      "id": "issue-ec05f407a081",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://the-internet.herokuapp.com/add_r",
+      "description": "Network request failed with 404",
+      "pageUrl": "https://the-internet.herokuapp.com/add_remove_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://the-internet.herokuapp.com/add_remove_elements - 404",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/add_remove_elements",
+            "method": "GET",
+            "error": "GET https://the-internet.herokuapp.com/add_remove_elements - 404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-ff54d0819583",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: the server responded with",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/basic_auth",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+        ]
+      }
+    },
+    {
+      "id": "issue-f8bc62e299f1",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://the-internet.herokuapp.com/basic",
+      "description": "Network request failed with 401",
+      "pageUrl": "https://the-internet.herokuapp.com/basic_auth",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://the-internet.herokuapp.com/basic_auth - 401",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/basic_auth",
+            "method": "GET",
+            "error": "GET https://the-internet.herokuapp.com/basic_auth - 401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-d54eae54cee9",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-32c7a6b159d9",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-01f5c32dc39a",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-1a0f888321cb",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: the server responded with",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+        ]
+      }
+    },
+    {
+      "id": "issue-b5097b7d9b1b",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/broken_images",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-b3320d755481",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/broken_images",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-695d6a11efe6",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/broken_images",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-76bf41a1dd7c",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://the-internet.herokuapp.com/asdf.",
+      "description": "Network request failed with 404",
+      "pageUrl": "https://the-internet.herokuapp.com/broken_images",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://the-internet.herokuapp.com/asdf.jpg - 404",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/broken_images",
+            "method": "GET",
+            "error": "GET https://the-internet.herokuapp.com/asdf.jpg - 404"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-4eb0d7c2f4ad",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-74024bd6437b",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-6130762029c0",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-3f57ab5773ed",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-beb0dc5693a8",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/challenging_dom",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-d88eded6253c",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/challenging_dom",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-4e714fbd8942",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/challenging_dom",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-fa24d45570c0",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/challenging_dom",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/challenging_dom",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-ceb9abdc3227",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-07dd5fc7c1c3",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-9408c628c0b1",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-ba421777f6b6",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-c2010874f3fc",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-b4fc80b16003",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/checkboxes",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-fda8852a7b82",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/checkboxes",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-4047aa31c8cf",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/checkboxes",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-e6d2f4907c5f",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/checkboxes",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-5f9553843b72",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/checkboxes",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-ccfaf61ac6e4",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-a184805c213c",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-1aadb60a37e4",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-d49f50d25473",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-2087fcd256de",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-e45b0d5106a3",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-54166aad554b",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/context_menu",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-5c555acc18be",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/context_menu",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-7be471f96553",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/context_menu",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-4941e80f8dd9",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/context_menu",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-6b33846b987b",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/context_menu",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-abf823b4fdda",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/context_menu",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/context_menu",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-1fca5b617da7",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: the server responded with",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/digest_auth",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+        ]
+      }
+    },
+    {
+      "id": "issue-1c0ac905d5b6",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://the-internet.herokuapp.com/diges",
+      "description": "Network request failed with 401",
+      "pageUrl": "https://the-internet.herokuapp.com/digest_auth",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://the-internet.herokuapp.com/digest_auth - 401",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/digest_auth",
+            "method": "GET",
+            "error": "GET https://the-internet.herokuapp.com/digest_auth - 401"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-b254a46b0a18",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-faa6b1f2ea80",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-c3ef9a3201e9",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-8fc66208b556",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-008b22ed106f",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-8d5c72739208",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-72d2eda1ebff",
+      "severity": "medium",
+      "category": "console-error",
+      "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+      "description": "Console error on page",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "consoleLog": [
+          "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        ]
+      }
+    },
+    {
+      "id": "issue-440ff503f214",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612391&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-ee40ceaac660",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fdisappearing_elements&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612943&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fdisappearing_elements&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612943&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-1fed65c9377a",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcontext_menu&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612764&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-d17eb03b40b6",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fchallenging_dom&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612525&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-08f491b60832",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fcheckboxes&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641612641&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-a3cd250f8440",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611946&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-5327a89a11d0",
+      "severity": "medium",
+      "category": "network-error",
+      "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+      "description": "Network request failed with error",
+      "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+      "selectors": [],
+      "reproSteps": [],
+      "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+      "foundAt": "2026-01-28T23:06:54.234Z",
+      "evidence": {
+        "networkLog": [
+          {
+            "url": "https://the-internet.herokuapp.com/disappearing_elements",
+            "method": "GET",
+            "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298343790&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "issue-44fe111f1f80",
+      "severity": "medium",
+      "category": "a11y-missing-label",
+      "title": "Input missing accessible label",
+      "description": "Input field has no accessible label. Element: <input type=\"checkbox\">",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [
+        "input"
+      ],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/checkboxes",
+        "Locate input: input",
+        "Use screen reader or accessibility tools",
+        "Observe: Input has no accessible label"
+      ],
+      "expectedBehavior": "Input should have an accessible label via <label>, aria-label, or aria-labelledby",
+      "actualBehavior": "Input has no accessible name for assistive technologies",
+      "suggestedFix": "Add a <label for=\"...\"> element or aria-label attribute to: input",
+      "foundAt": "2026-01-28T23:06:54.918Z",
+      "evidence": {}
+    },
+    {
+      "id": "issue-0b925bd94329",
+      "severity": "medium",
+      "category": "a11y-missing-label",
+      "title": "Input missing accessible label",
+      "description": "Input field has no accessible label. Element: <input type=\"checkbox\" checked=\"\">",
+      "pageUrl": "https://the-internet.herokuapp.com/checkboxes",
+      "selectors": [
+        "input"
+      ],
+      "reproSteps": [
+        "Navigate to https://the-internet.herokuapp.com/checkboxes",
+        "Locate input: input",
+        "Use screen reader or accessibility tools",
+        "Observe: Input has no accessible label"
+      ],
+      "expectedBehavior": "Input should have an accessible label via <label>, aria-label, or aria-labelledby",
+      "actualBehavior": "Input has no accessible name for assistive technologies",
+      "suggestedFix": "Add a <label for=\"...\"> element or aria-label attribute to: input",
+      "foundAt": "2026-01-28T23:06:54.918Z",
+      "evidence": {}
+    }
+  ],
+  "summary": {
+    "totalPagesVisited": 10,
+    "maxPagesReached": true,
+    "formsDiscovered": 1,
+    "formsTested": 1,
+    "linksChecked": 64,
+    "brokenLinksFound": 8,
+    "issuesByCategory": {
+      "form-validation": 0,
+      "form-required": 0,
+      "form-invalid-input": 0,
+      "broken-link": 8,
+      "console-error": 32,
+      "network-error": 32,
+      "a11y-missing-label": 2,
+      "a11y-missing-name": 0,
+      "a11y-focus-trap": 0,
+      "other": 0
+    },
+    "issuesBySeverity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 74,
+      "low": 0,
+      "info": 0
+    },
+    "totalIssues": 74,
+    "topIssues": [
+      {
+        "id": "issue-025471e85a82",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 401",
+        "description": "Link to \"https://the-internet.herokuapp.com/basic_auth\" returns HTTP 401. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/",
+          "Find link to: https://the-internet.herokuapp.com/basic_auth",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 401"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/basic_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 401",
+        "foundAt": "2026-01-28T23:06:53.044Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/basic_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-1826edfc9899",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 404",
+        "description": "Link to \"https://the-internet.herokuapp.com/add_remove_elements\" returns HTTP 404. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/",
+          "Find link to: https://the-internet.herokuapp.com/add_remove_elements",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 404"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/add_remove_elements\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 404",
+        "foundAt": "2026-01-28T23:06:53.091Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/add_remove_elements\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-7a34c03d827d",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 401",
+        "description": "Link to \"https://the-internet.herokuapp.com/digest_auth\" returns HTTP 401. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/",
+          "Find link to: https://the-internet.herokuapp.com/digest_auth",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 401"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/digest_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 401",
+        "foundAt": "2026-01-28T23:06:53.187Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/digest_auth\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-17f92fbbeecb",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 401",
+        "description": "Link to \"https://the-internet.herokuapp.com/download_secure\" returns HTTP 401. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/",
+          "Find link to: https://the-internet.herokuapp.com/download_secure",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 401"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/download_secure\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 401",
+        "foundAt": "2026-01-28T23:06:54.027Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/download_secure\",\n  \"status\": 401,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-5d4bd63113bc",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 404",
+        "description": "Link to \"https://the-internet.herokuapp.com/about\" returns HTTP 404. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+          "Find link to: https://the-internet.herokuapp.com/about",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 404"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/about\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 404",
+        "foundAt": "2026-01-28T23:06:54.197Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/disappearing_elements",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/about\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-4e77732044aa",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 404",
+        "description": "Link to \"https://the-internet.herokuapp.com/contact-us\" returns HTTP 404. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+          "Find link to: https://the-internet.herokuapp.com/contact-us",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 404"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/contact-us\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 404",
+        "foundAt": "2026-01-28T23:06:54.201Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/disappearing_elements",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/contact-us\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-d787a5e68d68",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 404",
+        "description": "Link to \"https://the-internet.herokuapp.com/portfolio\" returns HTTP 404. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+          "Find link to: https://the-internet.herokuapp.com/portfolio",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 404"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/portfolio\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 404",
+        "foundAt": "2026-01-28T23:06:54.207Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/disappearing_elements",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/portfolio\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-2bc65ae3c79c",
+        "severity": "medium",
+        "category": "broken-link",
+        "title": "Broken link: HTTP 404",
+        "description": "Link to \"https://the-internet.herokuapp.com/gallery\" returns HTTP 404. Found on 1 page(s).",
+        "pageUrl": "https://the-internet.herokuapp.com/disappearing_elements",
+        "selectors": [],
+        "reproSteps": [
+          "Navigate to https://the-internet.herokuapp.com/disappearing_elements",
+          "Find link to: https://the-internet.herokuapp.com/gallery",
+          "Click the link or check its status",
+          "Observe: Link returns HTTP 404"
+        ],
+        "networkSnippet": "{\n  \"url\": \"https://the-internet.herokuapp.com/gallery\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}",
+        "expectedBehavior": "Link should return a successful response (2xx)",
+        "actualBehavior": "Link returns HTTP 404",
+        "foundAt": "2026-01-28T23:06:54.234Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/disappearing_elements",
+              "method": "GET",
+              "error": "{\n  \"url\": \"https://the-internet.herokuapp.com/gallery\",\n  \"status\": 404,\n  \"foundOn\": [\n    \"https://the-internet.herokuapp.com/disappearing_elements\"\n  ]\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "issue-d8f58049189b",
+        "severity": "medium",
+        "category": "console-error",
+        "title": "Console error: Failed to load resource: net::ERR_NAME_NOT_RESOLVE",
+        "description": "Console error on page",
+        "pageUrl": "https://the-internet.herokuapp.com/",
+        "selectors": [],
+        "reproSteps": [],
+        "consoleSnippet": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "foundAt": "2026-01-28T23:06:54.234Z",
+        "evidence": {
+          "consoleLog": [
+            "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+          ]
+        }
+      },
+      {
+        "id": "issue-8d3cc2a1e01e",
+        "severity": "medium",
+        "category": "network-error",
+        "title": "Network error: GET https://298279967.log.optimizely.com/eve",
+        "description": "Network request failed with error",
+        "pageUrl": "https://the-internet.herokuapp.com/",
+        "selectors": [],
+        "reproSteps": [],
+        "networkSnippet": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED",
+        "foundAt": "2026-01-28T23:06:54.234Z",
+        "evidence": {
+          "networkLog": [
+            {
+              "url": "https://the-internet.herokuapp.com/",
+              "method": "GET",
+              "error": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1769641611532r0.2574392665619586&wxhr=true&t=1769641611534&f=298349752,318188263 - net::ERR_NAME_NOT_RESOLVED"
+            }
+          ]
+        }
+      }
+    ],
+    "durationMs": 5629
+  }
+}
